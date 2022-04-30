@@ -1,0 +1,106 @@
+$fontFam: 'Montserrat';
+$color-bg: rgba(255, 255, 255, 0.094);
+$color-text: white;
+
+@media screen and (min-width: 320px) {
+    body {
+        height: 100vh;
+    }
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1210px;
+    font-family: $fontFam;
+    background-image: url(../img/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        font-weight: 900;
+        text-align: center;
+
+        .header__title {
+            >h1 {
+                padding: 2%;
+                background-color: $color-bg;
+            }
+        }
+    }
+
+    .main {
+        text-align: center;
+        flex-grow: 1;
+
+        .title {
+            padding: 5% 0;
+
+            >h2 {
+                font-weight: 500;
+                font-size: 28px;
+            }
+        }
+
+        .buttons-blocks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .block {
+                margin: 2%;
+                padding: 2%;
+                background-color: $color-bg;
+                border: 1px solid $color-text;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+
+                >img {
+                    border: 1px solid $color-bg;
+                    border-radius: 20px;
+                }
+
+                .button {
+                    margin-top: 5%;
+                    padding: 5%;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $color-text;
+                    border: 1px solid $color-text;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    
+                    &:hover {
+                        background-color: $color-text;
+                        color: black;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        .footer__text {
+            >h4 {
+                font-weight: 400;
+            }
+        }
+        .footer__links {
+            >a {
+                padding: 5%;
+                >img {
+                    max-width: 20%;
+                }
+            }
+        }
+    }
+}
